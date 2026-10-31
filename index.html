@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1">
+
+<title>VNDugOut</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link
+    rel="manifest"
+    href="manifest.json">
+
+
+</head>
+
+
+
+<body>
+
+<h1>⚾ VNDugOut</h1>
+
+<div id="currentBatter">
+
+    <div class="small-label">
+        AT BAT
+    </div>
+
+    <div id="batterName">
+        Nobody
+    </div>
+
+</div>
+
+<button
+    class="fade-button"
+    onclick="fadeOutMusic()">
+
+    STOP MUSIC
+
+</button>
+
+<button
+    id="modeButton"
+    onclick="toggleMode()">
+
+    SWITCH TO GAME MODE
+
+</button>
+
+<div id="editControls">
+
+    <div class="toolbar">
+
+        <button onclick="addPlayer()">
+            ADD PLAYER
+        </button>
+
+        <button onclick="exportTeamPackage()">
+            EXPORT TEAM
+        </button>
+
+        <input
+            type="file"
+            id="importTeamFile"
+            accept=".json">
+
+    </div>
+
+</div>
+
+<div id="players"></div>
+
+<script src="app.js"></script>
+
+<script>
+
+alert("Script is running");
+
+if ("serviceWorker" in navigator) {
+
+    alert("Service Workers supported");
+
+    navigator.serviceWorker
+        .register("./service-worker.js")
+        .then(() => {
+
+            alert("Service Worker Registered");
+
+        })
+        .catch(error => {
+
+            alert(
+                "Service Worker Failed: " +
+                error
+            );
+
+        });
+
+} else {
+
+    alert(
+        "Service Workers NOT supported"
+    );
+
+}
+
+</script>
+
+</body>
+
+</html>

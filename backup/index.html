@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1">
+
+<title>VNDugOut</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h1>⚾ VNDugOut</h1>
+
+<div id="currentBatter">
+
+    <div class="small-label">
+        AT BAT
+    </div>
+
+    <div id="batterName">
+        Nobody
+    </div>
+
+</div>
+
+<button
+    class="fade-button"
+    onclick="fadeOutMusic()">
+
+    STOP MUSIC
+
+</button>
+
+<button
+    id="modeButton"
+    onclick="toggleMode()">
+
+    SWITCH TO GAME MODE
+
+</button>
+
+<div id="editControls">
+
+    <div class="toolbar">
+
+        <button onclick="addPlayer()">
+            ADD PLAYER
+        </button>
+
+        <button onclick="saveRoster()">
+            SAVE ROSTER
+        </button>
+
+        <input
+            type="file"
+            id="loadFile"
+            accept=".json">
+
+    </div>
+
+</div>
+
+<div id="players"></div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
